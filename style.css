@@ -1,0 +1,10 @@
+/* Basic styling to remove margin and ensure canvas takes full screen */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Optional: Style to indicate no borders or scrollbars */
+canvas {
+  display: block;
+}
