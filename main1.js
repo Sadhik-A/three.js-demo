@@ -14,13 +14,12 @@ const camera = new THREE.PerspectiveCamera(
   1000 // Far clipping plane
 );
 camera.position.set(5, 5, 10); // Position the camera
-camera.lookAt(0, 0, 0); // Make it look at the scene center
 
 // 3. Add a cube
 const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
 const cubeMaterial = new THREE.MeshStandardMaterial({ color: 0xff6347 }); // Tomato color
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cube.position.set(-2, 0.5, 0); // Slightly offset
+cube.position.set(-2, 1, 0); // Slightly offset
 scene.add(cube);
 
 // 4. Add a sphere
@@ -35,7 +34,6 @@ const planeGeometry = new THREE.PlaneGeometry(20, 20);
 const planeMaterial = new THREE.MeshStandardMaterial({ color: 0x228b22 }); // Forest green
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.rotation.x = -Math.PI / 2; // Rotate to make it horizontal
-plane.position.y = 0; // Flat on the ground
 scene.add(plane);
 
 // 6. Add lighting
