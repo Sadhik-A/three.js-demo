@@ -19,7 +19,7 @@ camera.position.set(5, 5, 10); // Position the camera
 const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
 const cubeMaterial = new THREE.MeshStandardMaterial({ color: 0xff6347 }); // Tomato color
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cube.position.set(-2, 1, 0); // Slightly offset
+cube.position.set(-2, 2, 4); // Slightly offset
 scene.add(cube);
 
 // 4. Add a sphere

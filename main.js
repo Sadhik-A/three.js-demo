@@ -1,6 +1,5 @@
 // Import Three.js core components
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 // 1.Create the scene - container for all 3D objects, lights, and camera
 const scene = new THREE.Scene();
@@ -26,17 +25,5 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight); // Set renderer size
 document.body.appendChild(renderer.domElement); // Append canvas to the document
 
-// Add OrbitControls to allow mouse interaction
-const controls = new OrbitControls(camera, renderer.domElement);
-
-//6. Animation loop to render the scene and animate objects
-function animate() {
-  requestAnimationFrame(animate); // Call animate recursively
-  controls.update();
-  // Rotate the cube for some animation
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-  renderer.render(scene, camera); // Render the scene through the camera
-}
-
-animate();
+//6.render the scene
+renderer.render(scene, camera);
